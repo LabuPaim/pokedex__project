@@ -1,0 +1,28 @@
+{
+  "name": "Pokedex-Project",
+  "version": "1.0.0",
+  "description": "Projeto 2 do módulo 2 do curso fullstack da BlueEdTech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LabuPaim/Pokedex-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LabuPaim/Pokedex-Project/issues"
+  },
+  "homepage": "https://github.com/LabuPaim/Pokedex-Project#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}

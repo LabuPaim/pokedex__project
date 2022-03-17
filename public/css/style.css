@@ -1,0 +1,181 @@
+/*======================================== HTML ========================================*/
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../img/background/poke_black.jpg');
+  background-size: 50vw 100vh;
+}
+
+/*======================================== NAV ========================================*/
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 15vh;
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
+
+.logo img {
+  display: flex;
+  max-width: 10vw;
+  max-height: 15vh;
+}
+
+.navbar-itens {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 15vh;
+}
+
+.container_navbar_itens {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  color: rgb(85, 84, 84);
+}
+
+.container_itens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.container_itens_poke {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;  
+  background-color: transparent;
+}
+
+
+.container_itens_poke ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border: solid 4px rgb(85, 84, 84);
+  border-radius: 50%;
+  background-color: transparent;
+  background: transparent;
+}
+
+
+#poke-circle {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 50%;
+  border-radius: 50%;
+  border: solid 4px rgb(85, 84, 84);
+  background: transparent;
+}
+
+#poke-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background: rgb(85, 84, 84);
+}
+
+
+.selection {
+  width: 100%;
+  height: 8px;
+}
+
+#selection_home {
+  background: red;
+  border-top-left-radius: 5px;
+}
+
+#selection_pokedex {
+  background: rgb(0, 60, 255);
+}
+
+#selection_add {
+  background: rgb(29, 133, 3);
+}
+
+#selection_grupo {
+  background: rgb(90, 90, 90);
+  border-top-right-radius: 5px;
+}
+
+.container_navbar_itens:hover {
+  color: white;
+}
+
+#container_navbar_itens_home:hover {
+  background: red;
+}
+
+#container_navbar_itens_pokedex:hover {
+  background: rgb(0, 60, 255);
+  border: #fff;
+}
+
+#container_navbar_itens_add:hover {
+  background: rgb(29, 133, 3);
+}
+#container_navbar_itens_grupo:hover {
+  background: rgb(90, 90, 90);
+}
+
+/*======================================= MAIN =======================================*/
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  flex-direction: column;
+  background-image: url('../img/background/poke_white.jpg');
+  background-size: 50vw 100vh;
+}
+/*------------------------------------- HEADER -------------------------------------*/
+
+/*====================================== FOOTER ======================================*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 19.3vh;
+  flex-direction: row;
+  background: rgb(20, 20, 20);
+}
