@@ -16,20 +16,40 @@
         <div class="logo"><img src="./img/imagens/Pokemon-Logo.png" alt="logo pokemon"></div>
         <div class="container_navbar_itens">
 
-
-            <div class="navbar_itens" id="pesquisa">
-
+            <div class="pokedex"><img src="./img/imagens/pokedex.png" alt="pokedex" /></div>
                 
-
-            </div>
-
+            <input type="text" id="input_pesquisa" name="fname" value="Pesquisar...">
 
 
-            <div class="navbar_itens" id="filtro">
+            <div class="navbar_itens" id="filtros">
 
-                <div id="filtro_1"></div>
-                <div id="filtro_2"></div>
-                <div id="ordem"></div>
+        
+                <select name="filtro_1" id="filtro">
+                    <option value="filtro">Filtro</option>
+                    <option value="planta">Planta</option>
+                    <option value="fogo">Fogo</option>
+                    <option value="agua">Água</option>
+                    <option value="choque">Choque</option>
+                </select>
+            
+                <select name="filtro_2" id="filtro">
+                    <option value="filtro">Filtro</option>
+                    <option value="planta">Planta</option>
+                    <option value="fogo">Fogo</option>
+                    <option value="agua">Água</option>
+                    <option value="choque">Choque</option>
+                </select>            
+            
+                <select name="ordem" id="filtro">
+                    <option value="ordem">Ordenar</option>
+                    <option value="nome">Nome</option>
+                    <option value="tipo">Tipo</option>
+                    <option value="dano">Dano</option>
+                    <option value="vida">Vida</option>
+                    <option value="defesa">Defesa</option>
+
+                </select>
+                
 
             </div>
 
@@ -46,23 +66,47 @@
 
 
     <main>
-        <div class="container_add"></div>
+        <div class="container_add">
 
-        <div class="container_card">
+            <div class="card_add">
 
-            <div class="card">
-                    
-                <a href="#">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" id="card_img" alt="Imagem" title="" />
-                    <span id="card_text"></span>Mensagem que deve aparece com o mouse em cima.</span>
-                    <span id="card_hidden"></span>Mensagem que deve aparece com o mouse em cima.</span>
-                </a>
-            
-                                    
-                
-            </div>
+                <img src="./img/imagens/plus.png" class="card_img_plus" alt="Imagem" title="" />                
+
+                <h2>ADD</h2>                
+
+            </div>            
+
+            <!-- <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile"> -->
 
         </div>
+
+        <% pokedex.forEach((pokemon) =>{%>
+
+        
+            <div class="container_card">
+
+                <div class="card">
+
+                    <h2 id="numero">Nº <%= pokemon.id %></h2>
+                    <img src="<%= pokemon.imagem %>" class="card_img" alt="Imagem" title="" />
+                    <h2 id="nome"><%= pokemon.nome %></h2>                                                   
+                    
+                </div>
+
+                <div class="lista">
+                    <span class="label">Tipo: </span><span class="label_resp"><%= pokemon.tipo %></span><br>
+                    <span class="label">Categoria: </span><span class="label_resp"><%= pokemon.categoria %></span><br>
+                    <span class="label">Habilidade: </span><span class="label_resp"><%= pokemon.habilidade %></span><br>                                
+                    <span class="label">Altura: </span><span class="label_resp"><%= pokemon.altura %> cm</span><br>
+                    <span class="label">Peso: </span><span class="label_resp"><%= pokemon.peso %> kg</span><br>                    
+                    <span class="label">Descrição: </span><span class="label_resp"><%= pokemon.descricao %></span><br>
+                    
+                </div> 
+
+            </div>
+        <% }) %>
+
 
     </main>
 
