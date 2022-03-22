@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
     <nav>
         <div class="logo"><img src="./img/imagens/Pokemon-Logo.png" alt="logo pokemon"></div>
         <div class="container_navbar_itens">
@@ -19,7 +18,6 @@
             <div class="pokedex"><img src="./img/imagens/pokedex.png" alt="pokedex" /></div>
                 
             <input type="text" id="input_pesquisa" name="fname" placeholder="Pesquisar...">
-
 
             <form action=""  class="navbar_itens" id="filtros">
         
@@ -47,14 +45,9 @@
                     <option value="vida">Vida</option>
                     <option value="defesa">Defesa</option>
 
-                </select>
-                
+                </select>                
 
             </form>
-
-
-
-
 
         </div>
         <div class="logo"><img src="./img/imagens/Pokemon-Logo.png" alt="logo pokemon"></div>
@@ -62,9 +55,8 @@
     </nav>
 
 
-
-
     <main>
+
         <div class="container_add" >
 
             <div class="card_add" id="card_add">
@@ -76,11 +68,11 @@
             </div>
 
 
-            <form action=""  class="card_form" id="card_form" method="post">
+            <form action="/add"  class="card_form" id="card_form" method="post">
 
                 <div class="card_form_row">
-                    <label for="numero">Número:</label>
-                    <input type="text" id="numero" name="numero" placeholder="001" size="8">
+                    <label for="id">Número:</label>
+                    <input type="text" id="id" name="id" placeholder="001" size="8">
                 </div>
 
                 <div class="card_form_row">
@@ -95,7 +87,7 @@
                 
                 <div class="card_form_row">
                     <label for="habilidade">Habilidade:</label>
-                    <input type="text" id="habilidade" name="habilidade" placeholder="Estática" size="8">
+                    <input type="text" id="habilidade" name="habilidade" placeholder="Estático" size="8">
                 </div>
 
                 <div class="card_form_row">
@@ -115,22 +107,22 @@
                 </div>                
 
                 <label for="imagem">Imagem:</label>
-                <textarea type="text" id="imagem" name="imagem" placeholder="Link: http//" size="10"></textarea>
+                <textarea type="text" id="imagem" name="imagem" placeholder="http//" size="10"></textarea>
                 <label for="descricao">Descrição:</label>
                 <textarea type="text" id="descricao" name="descricao" placeholder="Pikachu que pode gerar eletricidade poderosa tem bolsas nas bochechas que são extra macias e super elásticas." size="10"></textarea>
 
+                <button id="submit_cadastro" type="submit">Cadastrar</button>
+
             </form>
-
-
 
         </div>
 
         <% pokedex.forEach((pokemon) =>{%>
 
         
-            <div class="container_card">
+            <div class="container_card" id="container_card<%= pokemon.id %>">
 
-                <div class="card">
+                <div class="card" id="card">
 
                     <h2 id="numero">Nº <%= pokemon.id %></h2>
                     <img src="<%= pokemon.imagem %>" class="card_img" alt="Imagem" title="" />
@@ -138,7 +130,7 @@
                     
                 </div>
 
-                <div class="lista">
+                <div class="lista" id="lista">
                     <span class="label">Tipo: </span><span class="label_resp"><%= pokemon.tipo %></span><br>
                     <span class="label">Categoria: </span><span class="label_resp"><%= pokemon.categoria %></span><br>
                     <span class="label">Habilidade: </span><span class="label_resp"><%= pokemon.habilidade %></span><br>                                
@@ -150,6 +142,8 @@
 
             </div>
         <% }) %>
+
+        
 
 
     </main>

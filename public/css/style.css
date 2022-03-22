@@ -227,6 +227,8 @@ footer {
 
 
 .lista{
+  display: none;
+  flex-direction: column;
   width: 78%;
   height: 35%;
   padding-left: 0.5rem;
