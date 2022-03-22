@@ -3,6 +3,9 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
+
 const pokedex = [
   {
     id: "001",
@@ -27,9 +30,6 @@ const pokedex = [
     descricao: 'Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta de sua cauda.',
   },
 ]
-
-app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
   res.render("index", {pokedex});

@@ -18,13 +18,12 @@
 
             <div class="pokedex"><img src="./img/imagens/pokedex.png" alt="pokedex" /></div>
                 
-            <input type="text" id="input_pesquisa" name="fname" value="Pesquisar...">
+            <input type="text" id="input_pesquisa" name="fname" placeholder="Pesquisar...">
 
 
-            <div class="navbar_itens" id="filtros">
-
+            <form action=""  class="navbar_itens" id="filtros">
         
-                <select name="filtro_1" id="filtro">
+                <select name="filtro_1" id="filtro" placeholder="filtro">
                     <option value="filtro">Filtro</option>
                     <option value="planta">Planta</option>
                     <option value="fogo">Fogo</option>
@@ -41,7 +40,7 @@
                 </select>            
             
                 <select name="ordem" id="filtro">
-                    <option value="ordem">Ordenar</option>
+                    <option value="ordenar">Ordenar</option>
                     <option value="nome">Nome</option>
                     <option value="tipo">Tipo</option>
                     <option value="dano">Dano</option>
@@ -51,7 +50,7 @@
                 </select>
                 
 
-            </div>
+            </form>
 
 
 
@@ -74,10 +73,53 @@
 
                 <h2>ADD</h2>                
 
-            </div>            
+            </div>
 
-            <!-- <label for="myfile">Select a file:</label>
-            <input type="file" id="myfile" name="myfile"> -->
+
+            <form action=""  class="card_form">
+
+                <div class="card_form_row">
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" placeholder="001">
+                </div>
+
+                <div class="card_form_row">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Pikachu">
+                </div>
+
+                <div class="card_form_row">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" id="tipo" name="tipo" placeholder="Choque">
+                </div>
+                
+                <div class="card_form_row">
+                    <label for="habilidade">Habilidade:</label>
+                    <input type="text" id="habilidade" name="habilidade" placeholder="Estática">
+                </div>
+
+                <div class="card_form_row">
+                    <label for="categoria">Categoria:</label>
+                    <input type="text" id="categoria" name="categoria" placeholder="Rato">
+                </div>
+                
+
+                <div class="card_form_row">
+                    <label for="altura">Altura:</label>
+                    <input type="text" id="altura" name="altura" placeholder="40 cm">
+                </div>
+
+                <div class="card_form_row">
+                    <label for="peso">Peso:</label>
+                    <input type="text" id="peso" name="peso" placeholder="6 kg">
+                </div>                
+
+                <label for="imagem">Imagem:</label>
+                <input type="text" id="imagem" name="imagem" placeholder="Link: http//">
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" placeholder="Pikachu que pode gerar eletricidade poderosa tem bolsas nas bochechas que são extra macias e super elásticas.">                
+
+            </form>
 
         </div>
 
