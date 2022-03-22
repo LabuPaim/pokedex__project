@@ -156,26 +156,6 @@ footer {
 
 }
 
-#numero,
-#altura,
-#peso{
-  width: 25%;
-}
-
-#nome,
-#tipo,
-#habilidade,
-#categoria{
-  width: 40%;
-}
-
-#imagem,
-#descricao{
-  height: 20%;
-}
-
-
-
 
 .container_card{
   display: flex;  
