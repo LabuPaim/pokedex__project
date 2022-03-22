@@ -65,9 +65,9 @@
 
 
     <main>
-        <div class="container_add">
+        <div class="container_add" >
 
-            <div class="card_add">
+            <div class="card_add" id="card_add">
 
                 <img src="./img/imagens/plus.png" class="card_img_plus" alt="Imagem" title="" />                
 
@@ -76,7 +76,7 @@
             </div>
 
 
-            <form action=""  class="card_form">
+            <form action=""  class="card_form" id="card_form" method="post">
 
                 <div class="card_form_row">
                     <label for="numero">Número:</label>
@@ -121,6 +121,8 @@
 
             </form>
 
+
+
         </div>
 
         <% pokedex.forEach((pokemon) =>{%>
@@ -160,6 +162,6 @@
     </footer>
 
 
-    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>

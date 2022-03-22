@@ -117,10 +117,11 @@ footer {
   background-repeat: no-repeat;
   color: #F5E800;
   cursor: pointer;
+  overflow: auto;
 }
 
 .card_add {
-  display: none;  
+  display: flex;  
   flex-direction: column;
   align-items: center;  
   justify-content: center;
@@ -138,7 +139,7 @@ footer {
 }
 
 .card_form{
-  display: flex;
+  display: none;
   flex-direction: column;
   flex-wrap: wrap;
   width: 70%;
