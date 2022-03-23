@@ -22,18 +22,28 @@ const pokedex = [
   {
     id: '004',
     nome: 'Charmander',
-    tipo: 'Fogo',
-    categoria: 'Lagarto',
-    habilidade: 'Chama',
-    altura: 60,
+    
+    
     peso: '8,5',
     imagem: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png',
-    descricao: 'Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta de sua cauda.',
+    
   },
 ];
-
+const descricao = [
+  {
+    descricao:'',
+    categoria:'',
+    habilidade:'',
+    peso:'',
+    altura:'',
+  }
+]
 app.get('/', (req, res) => {
   res.render('index', { pokedex });
+});
+
+app.get('/descricao', (req, res) => {
+  res.render('index', { descricao });
 });
 
 app.post('/add', (req, res) => {
