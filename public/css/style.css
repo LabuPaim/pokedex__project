@@ -156,35 +156,35 @@ footer {
 
 }
 
-#numero{
+.card_form #id{
   margin-left: 1.1rem;
 }
 
-#nome{
+.card_form #nome{
   margin-left: 1.9rem;
 }
 
-#tipo{
+.card_form #tipo{
   margin-left: 2.5rem;
 }
 
-#categoria{
+.card_form #categoria{
   margin-left: 0.5rem;
 }
 
-#altura{
+.card_form #altura{
   margin-left: 1.8rem;
 }
 
-#peso{
+.card_form #peso{
   margin-left: 2.5rem;
 }
 
-#imagem{
+.card_form #imagem{
   height: 1rem;
 }
 
-#descricao{
+.card_form #descricao{
   height: 3rem;
 }
 
@@ -230,10 +230,10 @@ footer {
   display: none;
   flex-direction: column;
   width: 78%;
-  height: 35%;
+  height: 30%;
   padding-left: 0.5rem;
-  padding-top: 0.5rem;
-  overflow: hidden;
+  margin-top: -10rem;
+  
   
 }
 
