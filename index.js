@@ -25,11 +25,10 @@ const pokedex = [
     tipo: 'Água',
     categoria: 'Tartaruga',
     habilidade: 'Torrente',
-    altura: "50",
+    altura: '50',
     peso: '9',
     imagem: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png',
     detalhes: 'Quando retrai seu longo pescoço em sua concha, esguicha água com força vigorosa.',
-    
   },
 ];
 
@@ -37,11 +36,13 @@ app.get('/', (req, res) => {
   res.render('index', { pokedex });
 });
 
-app.get('/detalhes', (req, res) => {  
-  res.render('detalhes', { pokedex });
+pokedex.forEach(pokemon => {
+  app.get('/detalhes/' + pokemon.nome, (req, res) => {
+    res.render('detalhes', { pokedex });
+  });
 });
 
-app.get('/cadastro', (req, res) => {  
+app.get('/cadastro', (req, res) => {
   res.render('cadastro', { pokedex });
 });
 

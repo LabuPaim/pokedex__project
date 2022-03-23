@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="shortcut icon" type="imagex/png" href="./img/imagens/icon.ico">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>PokéDex</title>
 </head>
 <body>
@@ -170,7 +170,7 @@
         <% pokedex.forEach((pokemon) =>{%>
 
         
-            <div class="container_card" id="container_card">
+            <a class="container_card" id="container_card" href="/detalhes/<%= pokemon.nome %>" >
 
                 <div class="card" id="card">
 
@@ -178,19 +178,9 @@
                     <img src="<%= pokemon.imagem %>" class="card_img" alt="Imagem" title="" />
                     <h2 id="nome"><%= pokemon.nome %></h2>                                                   
                     
-                </div>
+                </div>                
 
-                <div class="lista" id="lista">
-                    <span class="label">Tipo: </span><span class="label_resp"><%= pokemon.tipo %></span><br>
-                    <span class="label">Categoria: </span><span class="label_resp"><%= pokemon.categoria %></span><br>
-                    <span class="label">Habilidade: </span><span class="label_resp"><%= pokemon.habilidade %></span><br>                                
-                    <span class="label">Altura: </span><span class="label_resp"><%= pokemon.altura %> cm</span><br>
-                    <span class="label">Peso: </span><span class="label_resp"><%= pokemon.peso %> kg</span><br>                    
-                    <span class="label">Descrição: </span><span class="label_resp"><%= pokemon.descricao %></span><br>
-                    
-                </div> 
-
-            </div>
+            </a>
         <% }) %>
 
         
