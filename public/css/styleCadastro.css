@@ -28,10 +28,11 @@ nav {
   background: rgb(3, 113, 74);
 }
 
-main {
+main {  
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;  
   width: 80%;
   height: 100%;
   background-color: #fff;  
@@ -185,4 +186,70 @@ footer {
 /*========================================================================== MAIN ==========================================================================*/
 
 
+.card_form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 30%;
+  font-weight: bold;
+  color: rgb(4, 60, 99);
+  gap: 0.8rem;
+  
+}
 
+.card_form_row{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  gap: 1rem;
+}
+
+.form_input{
+  width: 80%;
+  border: 1.5px solid rgb(94, 93, 93);
+  border-radius: 3px 3px 3px 3px;  
+}
+
+.form_input:focus{
+  background: rgba(4, 30, 204, 0.251);
+}
+
+#id{
+  margin-left: 1.25rem;
+
+}
+
+#nome{
+  margin-left: 2.25rem;
+}
+
+#tipo{
+  margin-left: 2.75rem;
+  
+}
+
+#categoria{
+  margin-left: 0.5rem;
+  
+}
+
+#altura{
+  margin-left: 1.9rem;
+}
+
+#peso{
+  margin-left: 2.8rem;
+}
+
+#submit_cadastro{
+  margin-left: 7rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+
+}
