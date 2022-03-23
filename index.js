@@ -17,7 +17,7 @@ const pokedex = [
     altura: 50,
     peso: '15',
     imagem: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png',
-    descricao: 'Há uma semente de planta nas costas desde o dia em que este Pokémon nasce. A semente cresce lentamente.',
+    detalhes: 'Há uma semente de planta nas costas desde o dia em que este Pokémon nasce. A semente cresce lentamente.',
   },
   {
     id: '004',
@@ -29,9 +29,9 @@ const pokedex = [
     
   },
 ];
-const descricao = [
+const detalhes = [
   {
-    descricao:'',
+    detalhes:'',
     categoria:'',
     habilidade:'',
     peso:'',
@@ -42,8 +42,8 @@ app.get('/', (req, res) => {
   res.render('index', { pokedex });
 });
 
-app.get('/descricao', (req, res) => {
-  res.render('index', { descricao });
+app.get('/detalhes', (req, res) => {
+  res.render('index', { detalhes });
 });
 
 app.post('/add', (req, res) => {
