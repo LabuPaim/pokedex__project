@@ -25,7 +25,6 @@ nav {
   align-items: center;
   min-height: 8vh;
   width: 100%;
-  background: rgb(3, 113, 74);
 }
 
 main {  
@@ -35,7 +34,7 @@ main {
   justify-content: center;  
   width: 80%;
   height: 100%;
-  background-color: #fff;  
+  background-color: rgb(255, 255, 255);  
 }
 
 footer {
@@ -216,7 +215,7 @@ footer {
 }
 
 .form_input:focus{
-  background: rgba(4, 30, 204, 0.251);
+  background: rgba(4, 31, 204, 0.19);
 }
 
 #id{
@@ -246,10 +245,49 @@ footer {
   margin-left: 2.8rem;
 }
 
-#submit_cadastro{
+/* #submit_cadastro{
   margin-left: 7rem;
   padding: 0.5rem;
   margin-top: 0.5rem;
   cursor: pointer;
 
+} */
+
+.submit_cadastro {
+  width: 12rem;
+  height: 3rem;
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  font-size:1.5vw;
+  font-weight:bold;
+  padding-left: 0.9rem;
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.submit_cadastro:after {
+  content:attr(alt);
+  width: 11.5rem;
+  height: 2.5rem;
+  background-color:rgb(255, 255, 255);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-left: -10rem;
+  color: rgb(4, 60, 99);
+}
+
+.submit_cadastro:hover {
+  animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
 }
