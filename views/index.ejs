@@ -10,8 +10,7 @@
     <title>PokéDex</title>
 </head>
 <body>
-
-    <nav>
+    <!-- <nav>
         <div class="logo"><img src="./img/imagens/Pokemon-Logo.png" alt="logo pokemon"></div>
         <div class="container_navbar_itens">
 
@@ -52,8 +51,59 @@
         </div>
         <div class="logo"><img src="./img/imagens/Pokemon-Logo.png" alt="logo pokemon"></div>
 
-    </nav>
+    </nav> -->
 
+    <nav class="navbar">
+        <div class="logo"><img src="./img/imagens/Pokemon-Logo.png" alt="logo pokemon"></div>
+
+        <div class="navbar-itens">
+
+            <a class="container_navbar_itens" id="container_navbar_itens_home" href="/">
+
+                <span></span>
+                <div class="container_itens">
+                    <span class="material-icons">home</span>
+                    <h2 id="material-text">Home</h2>                    
+                </div>
+                <span class="selection" id="selection_home"></span>
+
+            </a>
+            
+            <a class="container_navbar_itens" id="container_navbar_itens_pokedex" href="/detalhes">
+
+                <span></span>
+                <div class="container_itens_poke" id="container_itens_poke">
+
+                    <ul id="ulcircle">
+                        <li class="poke-line" id="poke-line1"></li>
+                        <li id="poke-circle"></li>
+                        <li class="poke-line" id="poke-line2"></li>
+                    </ul>                    
+                    <h2 id="material-text">Pokédex</h2>
+                    <span class="selection"></span>
+
+                </div>
+                <span class="selection" id="selection_pokedex"></span>
+
+            </a>
+
+            <a class="container_navbar_itens" id="container_navbar_itens_add" href="/cadastro">
+
+                <span></span>
+                <div class="container_itens">                
+                    <span class="material-icons">add</span>
+                    <h2 id="material-text">Add</h2>
+                    <span class="selection add"></span>
+                </div>
+                <span class="selection" id="selection_add"></span>
+
+            </a>            
+
+        </div>
+
+        <div class="logo"><img src="./img/imagens/Pokemon-Logo.png" alt="logo pokemon"></div>
+
+    </nav>
 
     <main>
 
