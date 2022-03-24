@@ -32,12 +32,23 @@ const pokedex = [
   },
 ];
 
+const list__filtro =[]
+
 app.get('/', (req, res) => {
   res.render('index', { pokedex });
 });
 
-app.get('/cadastro', (req, res) => {
-  res.render('cadastro', { pokedex });
+app.get('/pokedex', (req, res) => {
+  res.render('pokedex', { pokedex });
+});
+
+app.post('/filtro', (req, res) => {
+  const filtro = req.body;
+  const pokemon = pokedex.find(pokemon => pokemon.tipo == filtro);
+
+  list__filtro.push(pokemon)
+  
+  res.redirect('/pokedex');
 });
 
 app.post('/add', (req, res) => {
@@ -46,11 +57,18 @@ app.post('/add', (req, res) => {
   res.redirect('/');
 });
 
+app.get('/cadastro', (req, res) => {
+  res.render('cadastro', { pokedex });
+});
+
 app.post('/cadastro', (req, res) => {
   const pokemon = req.body;
   pokedex.push(pokemon);
   res.redirect('/cadastro');
 });
+
+
+
 
 app.get('/detalhes/:nome', (req, res) => {
   const nome = req.params.nome;
