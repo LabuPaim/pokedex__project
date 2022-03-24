@@ -36,11 +36,7 @@ app.get('/', (req, res) => {
   res.render('index', { pokedex });
 });
 
-pokedex.forEach(pokemon => {
-  app.get('/detalhes/' + pokemon.nome, (req, res) => {
-    res.render('detalhes', { pokedex });
-  });
-});
+
 
 app.get('/cadastro', (req, res) => {
   res.render('cadastro', { pokedex });
@@ -57,5 +53,11 @@ app.post('/cadastro', (req, res) => {
   pokedex.push(pokemon);
   res.redirect('/cadastro');
 });
+
+
+app.get('/detalhes/:pokemon', (req, res) => {
+  res.render('detalhes',  {pokedex} );
+});
+
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
