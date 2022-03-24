@@ -36,8 +36,6 @@ app.get('/', (req, res) => {
   res.render('index', { pokedex });
 });
 
-
-
 app.get('/cadastro', (req, res) => {
   res.render('cadastro', { pokedex });
 });
@@ -54,10 +52,11 @@ app.post('/cadastro', (req, res) => {
   res.redirect('/cadastro');
 });
 
+app.get('/detalhes/:nome', (req, res) => {
+  const nome = req.params.nome;
+  const pokemon = pokedex.find(pokemon => pokemon.nome == nome);
 
-app.get('/detalhes/:pokemon', (req, res) => {
-  res.render('detalhes',  {pokedex} );
+  res.render('detalhes', { pokemon: pokemon });
 });
-
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
