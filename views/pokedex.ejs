@@ -75,7 +75,7 @@
             <form  class="navbar_itens" id="filtros">
         
                 <select name="filtro" id="filtro" method="post" action="/filtro">
-                    <option value="filtro">Filtro</option>
+                    <option value="filtro">Tipo:</option>
                     <option value="planta">Planta</option>
                     <option value="fogo">Fogo</option>
                     <option value="agua">Água</option>
@@ -114,12 +114,12 @@
                         
                     </div>
                     <div class="lista" id="lista">
-                        <span class="label">Tipo: </span><span class="label_resp"><%= pokemon.tipo %></span><br>
-                        <span class="label">Categoria: </span><span class="label_resp"><%= pokemon.categoria %></span><br>
-                        <span class="label">Habilidade: </span><span class="label_resp"><%= pokemon.habilidade %></span><br>                                
-                        <span class="label">Altura: </span><span class="label_resp"><%= pokemon.altura %> cm</span><br>
-                        <span class="label">Peso: </span><span class="label_resp"><%= pokemon.peso %> kg</span><br>                    
-                        <span class="label">Descrição: </span><span class="label_resp"><%= pokemon.descricao %></span><br>
+                        <span class="label">Tipo: <%= pokemon.tipo %></span>
+                        <span class="label">Categoria: <%= pokemon.categoria %></span>
+                        <span class="label">Habilidade: <%= pokemon.habilidade %></span>                                
+                        <span class="label">Altura: <%= pokemon.altura %> cm</span>
+                        <span class="label">Peso: <%= pokemon.peso %> kg</span>                    
+                        <span class="label">Descrição: <%= pokemon.descricao %></span>
                         
                     </div>             
     

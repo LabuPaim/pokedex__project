@@ -158,6 +158,7 @@ footer {
 
 #selection_add {
   background: rgb(29, 133, 3);
+  border-top-right-radius: 5px;
 }
 
 
@@ -176,7 +177,7 @@ footer {
 }
 
 #container_navbar_itens_add:hover {
-  background: rgb(29, 133, 3);
+  background: rgb(29, 133, 3);  
 }
 
 

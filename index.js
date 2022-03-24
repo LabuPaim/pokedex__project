@@ -43,12 +43,11 @@ app.get('/pokedex', (req, res) => {
 });
 
 app.post('/filtro', (req, res) => {
-  const filtro = req.body;
-  const pokemon = pokedex.find(pokemon => pokemon.tipo == filtro);
 
-  list__filtro.push(pokemon)
-  
-  res.redirect('/pokedex');
+  const filtro = document.getElementById('filtro')
+  const pokemon = pokedex.find(pokemon => pokemon.tipo == filtro);
+  list__filtro.push(pokemon)  
+  res.redirect('/pokedex', {list__filtro});
 });
 
 app.post('/add', (req, res) => {

@@ -159,6 +159,7 @@ footer {
 
 #selection_add {
   background: rgb(29, 133, 3);
+  border-top-right-radius: 5px;
 }
 
 .container_navbar_itens:hover {
@@ -175,7 +176,7 @@ footer {
 }
 
 #container_navbar_itens_add:hover {
-  background: rgb(29, 133, 3);
+  background: rgb(29, 133, 3);  
 }
 
 .logo img {
@@ -253,7 +254,7 @@ footer {
 }
 
 .card {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: start;
@@ -265,4 +266,15 @@ footer {
 .card_img {
   width: 100%;
   height: 70%;
+}
+
+.lista{
+    border: 3px solid rgb(235, 14, 14);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    width: 75%;
+    max-height: 85%;
 }
