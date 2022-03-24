@@ -185,111 +185,22 @@ footer {
 /*========================================================================== MAIN ==========================================================================*/
 
 
-.card_form{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  align-content: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  width: 30%;
-  font-weight: bold;
-  color: rgb(4, 60, 99);
-  gap: 0.8rem;
-  
-}
-
-.card_form_row{
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 80%;
-  gap: 1rem;
-}
-
-.form_input{
-  width: 80%;
-  border: 1.5px solid rgb(94, 93, 93);
-  border-radius: 3px 3px 3px 3px;  
-}
-
-.form_input:focus{
-  background: rgba(4, 31, 204, 0.19);
-}
-
-#id{
-  margin-left: 1.25rem;
-
-}
-
-#nome{
-  margin-left: 2.25rem;
-}
-
-#tipo{
-  margin-left: 2.75rem;
-  
-}
-
-#categoria{
-  margin-left: 0.5rem;
-  
-}
-
-#altura{
-  margin-left: 1.9rem;
-}
-
-#peso{
-  margin-left: 2.8rem;
-}
-
-/* #submit_cadastro{
-  margin-left: 7rem;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-
-} */
-
-.submit_cadastro {
-  width: 12rem;
-  height: 3rem;
-  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-  border-radius:5px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-transform:uppercase;
-  font-size:1.5vw;
-  font-weight:bold;
-  padding-left: 0.9rem;
-  margin-left: 3rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-}
-
-.submit_cadastro:after {
-  content:attr(alt);
-  width: 11.5rem;
-  height: 2.5rem;
-  background-color:rgb(255, 255, 255);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-left: -10rem;
-  color: rgb(4, 60, 99);
-}
-
-.submit_cadastro:hover {
-  animation:slidebg 2s linear infinite;
-}
-
-@keyframes slidebg {
-  to {
-    background-position:20vw;
+.container_card{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 40%;
+    min-width: 25rem;
+    height: 28.7rem; 
+    background-image: url('../img/imagens/moldura.png');
+    background-size: 100% 99%;
+    background-repeat: no-repeat;
+    color: #F5E800;
+    cursor: pointer;
+    text-decoration: none;    
+    
   }
-}
 
 
