@@ -192,8 +192,8 @@ footer {
   align-items: flex-start;
   justify-content: center;
   align-content: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 1.5rem;  
+  margin-left: 4rem;
   width: 30%;
   font-weight: bold;
   color: rgb(4, 60, 99);
@@ -246,14 +246,6 @@ footer {
   margin-left: 2.8rem;
 }
 
-/* #submit_cadastro{
-  margin-left: 7rem;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-
-} */
-
 .submit_cadastro {
   width: 12rem;
   height: 3rem;
@@ -268,6 +260,7 @@ footer {
   padding-left: 0.9rem;
   margin-left: 3rem;
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
   cursor: pointer;
 }
 
@@ -293,4 +286,34 @@ footer {
   }
 }
 
+.cadastro__alert{  
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  justify-content:center;
+  align-items:center;
+  background-color: rgba(52, 172, 16, 0.863);  
+  height: 2rem;
+  gap: 2rem;
 
+}
+
+#cadastro__alert__title{
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
+
+}
+
+#cadastro__alert__close{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-weight: bold;
+  width: 2rem;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  background-color: rgb(141, 6, 6);
+  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
+
+}

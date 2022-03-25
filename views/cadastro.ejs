@@ -107,20 +107,27 @@
             <label for="descricao">Descrição:</label>
             <textarea class="form_input" type="text" id="descricao" name="descricao" ></textarea>
 
-            <button class="submit_cadastro" id="submit_cadastro" alt="Cadastrar" type="submit">Cadastrar</button>
+            <button class="submit_cadastro" id="submit_cadastro" alt="Cadastrar" onclick="validar__cadastro()" >Cadastrar</button>
 
         </form>
 
+        <div class="cadastro__alert" id="cadastro__alert">
+            <h3 id="cadastro__alert__title">
+                Pokemon Cadastrado com Sucesso!
+            </h3>
+            <h3 id="cadastro__alert__close">
+                X
+            </h3>
+            
+        </div>
+
     </main>
-
-
-
 
     <footer>
 
     </footer>
 
 
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/script__cadastro.js"></script>
 </body>
 </html>
