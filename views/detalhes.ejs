@@ -67,23 +67,39 @@
         
         <div class="container_card" id="container_card">
 
-            <div class="card" id="card">
-
+            
+            <div class ="card__nome__id">
+                
                 <h2 id="numero">Nº <%= pokemon.id %></h2>
-                <img src="<%= pokemon.imagem %>" class="card_img" alt="Imagem" title="" />
-                <h2 id="nome"><%= pokemon.nome %></h2>                                                   
+                <h2 id="nome"><%= pokemon.nome %></h2>                                                       
                 
             </div>
-
-            <div class="lista" id="lista">
-                <span class="label">Tipo: </span><span class="label_resp"><%= pokemon.tipo %></span><br>
-                <span class="label">Categoria: </span><span class="label_resp"><%= pokemon.categoria %></span><br>
-                <span class="label">Habilidade: </span><span class="label_resp"><%= pokemon.habilidade %></span><br>                                
-                <span class="label">Altura: </span><span class="label_resp"><%= pokemon.altura %> cm</span><br>
-                <span class="label">Peso: </span><span class="label_resp"><%= pokemon.peso %> kg</span><br>                    
-                <span class="label">Descrição: </span><span class="label_resp"><%= pokemon.descricao %></span><br>
+            <div class="card__img__lista">
                 
-            </div> 
+                <img src="<%= pokemon.imagem %>" class="card_img" alt="Imagem" title="" />
+                
+                <div class="lista" id="lista">
+                    <div class="lista__row">
+                        <span class="label">Tipo: </span><span class="label_resp"><%= pokemon.tipo %></span>
+                    </div>
+                    <div class="lista__row">
+                        <span class="label">Categoria: </span><span class="label_resp"><%= pokemon.categoria %></span>
+                    </div>
+                    <div class="list__row">
+                        <span class="label">Habilidade: </span><span class="label_resp"><%= pokemon.habilidade %></span>
+                    </div>
+                    <div class="list__row">
+                        <span class="label">Altura: </span><span class="label_resp"><%= pokemon.altura %> cm</span>
+                    </div>                    
+                    <div class="list__row">
+                        <span class="label">Peso: </span><span class="label_resp"><%= pokemon.peso %> kg</span>
+                    </div>
+                                        
+                    <span class="label">Descrição: </span><span class="label_resp"><%= pokemon.descricao %></span>
+                    
+                </div> 
+            </div>
+            
 
         </div>
                  
