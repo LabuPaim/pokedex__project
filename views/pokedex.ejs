@@ -28,7 +28,7 @@
 
             </a>
             
-            <a class="container_navbar_itens" id="container_navbar_itens_pokedex" href="/detalhes">
+            <a class="container_navbar_itens" id="container_navbar_itens_pokedex" href="/pokedex">
 
                 <span></span>
                 <div class="container_itens_poke" id="container_itens_poke">
@@ -74,12 +74,12 @@
 
             <form  class="navbar_itens" id="filtros">
         
-                <select name="filtro" id="filtro" method="post" action="/filtro">
-                    <option value="filtro">Tipo:</option>
-                    <option value="planta">Planta</option>
-                    <option value="fogo">Fogo</option>
-                    <option value="agua">Água</option>
-                    <option value="choque">Choque</option>
+                <select name="filtro" id="filtro">
+                    <option value="filtro" action="/pokedexfiltro" method="post">Tipo:</option>
+                    <option value="planta" action="/pokedexfiltro" method="post">Planta</option>
+                    <option value="fogo" action="/pokedexfiltro" method="post">Fogo</option>
+                    <option value="agua" action="/pokedexfiltro" method="post">Água</option>
+                    <option value="choque" action="/pokedexfiltro" method="post">Choque</option>
                 </select>                         
             
                 <select name="ordem" id="ordem">
@@ -130,10 +130,6 @@
 
         </div>
 
-        
-
-        
-
 
     </main>
 
@@ -142,9 +138,17 @@
 
     <footer>
 
+        <div>
+
+        </div>
+
+        <div id="copyright">
+            <p>Copyright &copy; 2022 <a href="https://www.linkedin.com/in/labupaim" target="_blank"> Victor Paim </a> & <a href="https://github.com/LHcouto" target="_blank">Luis Couto </a> - Todos os direitos reservados</p>
+        </div>
+
     </footer>
 
 
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="./js/script__pokedex.js"></script>
 </body>
 </html>

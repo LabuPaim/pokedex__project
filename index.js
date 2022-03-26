@@ -32,12 +32,20 @@ const pokedex = [
   },
 ];
 
+const lista__filtro = [];
+
 app.get('/', (req, res) => {
   res.render('index', { pokedex });
 });
 
 app.get('/pokedex', (req, res) => {
   res.render('pokedex', { pokedex });
+});
+
+app.post('/pokedexfiltro', (req, res) => {
+  console.log('foi sim');
+  lista__filtro.push(pokedex.map(e => req.query.tipo == e.tipo));
+  res.redirect('/pokedex', { pokedex: lista__filtro });
 });
 
 app.post('/add', (req, res) => {

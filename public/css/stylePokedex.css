@@ -6,10 +6,16 @@
   margin: 0;
 }
 
+html,
 body {
   display: flex;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   background-image: url('../img/background/poke_black.jpg');
   background-size: 50% 100%;
@@ -18,36 +24,30 @@ body {
 nav {
   display: flex;
   position: sticky;
-  top: 0;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 8vh;
+  top: 0;
+  min-height: 6.5rem;
   width: 100%;
-  background: rgb(3, 113, 74);
 }
 
 main {
-  border: 3px solid rgb(241, 6, 6);
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  width: 80%;
-  height: 100%;
   background-color: #fff;
+  width: 80%;
 }
 
 footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 19.3vh;
+  margin-top: auto;
   background: rgb(20, 20, 20);
-  bottom: 0px;
+  width: 100%;
 }
 
 /*========================================================================== NAV ==========================================================================*/
@@ -57,7 +57,6 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 15vh;
   width: 100%;
   background: rgb(255, 255, 255);
 }
@@ -176,13 +175,7 @@ footer {
 }
 
 #container_navbar_itens_add:hover {
-  background: rgb(29, 133, 3);  
-}
-
-.logo img {
-  display: flex;
-  max-height: 10vh;
-  padding: 0.5rem 2rem;
+  background: rgb(29, 133, 3);
 }
 
 /*========================================================================== MAIN ==========================================================================*/
@@ -226,14 +219,12 @@ footer {
 }
 
 .main__cards {
-  border: 3px solid rgb(241, 6, 6);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
+  width: 83%;
   gap: 1rem;
-  justify-content: center;
-  padding: 2rem 0rem 2rem 0rem;
+  margin-top: 1rem;
 }
 
 .container_card {
@@ -254,7 +245,7 @@ footer {
 }
 
 .card {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
@@ -268,13 +259,33 @@ footer {
   height: 70%;
 }
 
-.lista{
-    border: 3px solid rgb(235, 14, 14);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    column-gap: 2rem;
-    row-gap: 1rem;
-    width: 75%;
-    max-height: 85%;
+.lista {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  width: 75%;
+  max-height: 85%;
+}
+
+.container_card:hover .card {
+  display: none;
+}
+.container_card:hover .lista {
+  display: flex;
+}
+
+/*=================================================================== FOOTER ==========================================================================*/
+
+#copyright {
+  display: flex;
+  flex-direction: row;
+  color: rgb(210, 245, 12);
+  gap: 0.3rem;
+}
+
+#copyright a {
+  text-decoration: none;
+  color: rgb(12, 230, 245);
 }
