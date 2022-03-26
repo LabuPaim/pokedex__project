@@ -183,25 +183,21 @@ footer {
 /*========================================================================== MAIN ==========================================================================*/
 
 .container_card {
-  /* border: 3px solid rgb(240, 11, 11); */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
   width: 40%;
   min-width: 25rem;
-  height: 28.7rem;
+  height: 32rem;
   background-image: url('../img/imagens/moldura.png');
   background-size: 100% 99%;
   background-repeat: no-repeat;
   color: #f5e800;
   cursor: pointer;
   text-decoration: none;
-  gap: 2rem;
 }
 .card__nome__id {
-  /* border: 3px solid rgb(240, 225, 11); */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -209,13 +205,12 @@ footer {
   gap: 2rem;
 }
 .card__img__lista {
-  /* border: 3px solid rgb(240, 11, 202); */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 80%;
-  height: 65%;
+  height: 60%;
 }
 
 .card_img {
@@ -242,6 +237,14 @@ footer {
 .label_resp{
   color: rgb(170, 170, 170);
 }
+
+.list__descricao{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 75%;
+}
+
 /*=================================================================== FOOTER ==========================================================================*/
 
 #copyright {
