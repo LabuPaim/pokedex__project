@@ -114,12 +114,26 @@
                         
                     </div>
                     <div class="lista" id="lista">
-                        <span class="label">Tipo: <%= pokemon.tipo %></span>
-                        <span class="label">Categoria: <%= pokemon.categoria %></span>
-                        <span class="label">Habilidade: <%= pokemon.habilidade %></span>                                
-                        <span class="label">Altura: <%= pokemon.altura %> cm</span>
-                        <span class="label">Peso: <%= pokemon.peso %> kg</span>                    
-                        <span class="label">Descrição: <%= pokemon.descricao %></span>
+                        <div class="lista__row">
+                            <span class="label">Tipo: </span><span class="label_resp"><%= pokemon.tipo %></span>
+                        </div>
+                        <div class="lista__row">
+                            <span class="label">Categoria: </span><span class="label_resp"><%= pokemon.categoria %></span>
+                        </div>
+                        <div class="list__row">
+                            <span class="label">Habilidade: </span><span class="label_resp"><%= pokemon.habilidade %></span>
+                        </div>
+                        <div class="list__row">
+                            <span class="label">Altura: </span><span class="label_resp"><%= pokemon.altura %> cm</span>
+                        </div>                    
+                        <div class="list__row">
+                            <span class="label">Peso: </span><span class="label_resp"><%= pokemon.peso %> kg</span>
+                        </div>
+                        <div class="list__descricao">
+                            <span class="label">Descrição: </span><span class="label_resp"><%= pokemon.descricao %></span>
+            
+                        </div>
+            
                         
                     </div>             
     

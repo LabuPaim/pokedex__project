@@ -269,6 +269,21 @@ footer {
   max-height: 85%;
 }
 
+.label{
+  font-weight: bold;
+}
+
+.label_resp{
+  color: rgb(170, 170, 170);
+}
+
+.list__descricao{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .container_card:hover .card {
   display: none;
 }
