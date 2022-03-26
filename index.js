@@ -17,7 +17,7 @@ const pokedex = [
     altura: '50',
     peso: '15',
     imagem: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png',
-    detalhes: 'Há uma semente de planta nas costas desde o dia em que este Pokémon nasce. A semente cresce lentamente.',
+    descricao: 'Há uma semente de planta nas costas desde o dia em que este Pokémon nasce. A semente cresce lentamente.',
   },
   {
     id: '007',
@@ -28,7 +28,7 @@ const pokedex = [
     altura: '50',
     peso: '9',
     imagem: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png',
-    detalhes: 'Quando retrai seu longo pescoço em sua concha, esguicha água com força vigorosa.',
+    descricao: 'Quando retrai seu longo pescoço em sua concha, esguicha água com força vigorosa.',
   },
 ];
 
