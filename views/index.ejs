@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <nav class="navbar">
+    <nav>
         <div class="logo"><img src="./img/imagens/Pokemon-Logo.png" alt="logo pokemon"></div>
 
         <div class="navbar-itens">
@@ -65,82 +65,88 @@
 
     <main>
 
-        <div class="container_add" >
+        <div class="main__cards">
 
-            <div class="card_add" id="card_add">
+            <div class="container_add" >
 
-                <img src="./img/imagens/plus.png" class="card_img_plus" alt="Imagem" title="" />                
-
-                <h2>ADD</h2>                
-
+                <div class="card_add" id="card_add">
+    
+                    <img src="./img/imagens/plus.png" class="card_img_plus" alt="Imagem" title="" />                
+    
+                    <h2>ADD</h2>                
+    
+                </div>
+    
+    
+                <form action="/add"  class="card_form" id="card_form" method="post">
+    
+                    <div class="card_form_row">
+                        <label for="id">Número:</label>
+                        <input type="text" id="id" name="id" placeholder="001" size="8">
+                    </div>
+    
+                    <div class="card_form_row">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Pikachu" size="8">
+                    </div>
+    
+                    <div class="card_form_row">
+                        <label for="tipo">Tipo:</label>
+                        <input type="text" id="tipo" name="tipo" placeholder="Choque" size="8">
+                    </div>
+                    
+                    <div class="card_form_row">
+                        <label for="habilidade">Habilidade:</label>
+                        <input type="text" id="habilidade" name="habilidade" placeholder="Estático" size="8">
+                    </div>
+    
+                    <div class="card_form_row">
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" id="categoria" name="categoria" placeholder="Rato" size="8">
+                    </div>
+                    
+    
+                    <div class="card_form_row">
+                        <label for="altura">Altura:</label>
+                        <input type="text" id="altura" name="altura" placeholder="40 cm" size="8">
+                    </div>
+    
+                    <div class="card_form_row">
+                        <label for="peso">Peso:</label>
+                        <input type="text" id="peso" name="peso" placeholder="6 kg" size="8">
+                    </div>                
+    
+                    <label for="imagem">Imagem:</label>
+                    <textarea type="text" id="imagem" name="imagem" placeholder="http//" size="10"></textarea>
+                    <label for="descricao">Descrição:</label>
+                    <textarea type="text" id="descricao" name="descricao" placeholder="Pikachu que pode gerar eletricidade poderosa tem bolsas nas bochechas que são extra macias e super elásticas." size="10"></textarea>
+    
+                    <button id="submit_cadastro" type="submit">Cadastrar</button>
+    
+                </form>
+    
             </div>
+    
+            <% pokedex.forEach((pokemon) =>{%>
+    
+            
+                <a class="container_card" id="container_card" href="/detalhes/<%= pokemon.nome %>" >
+    
+                    <div class="card" id="card">
+    
+                        <h2 id="numero">Nº <%= pokemon.id %></h2>
+                        <img src="<%= pokemon.imagem %>" class="card_img" alt="Imagem" title="" />
+                        <h2 id="nome"><%= pokemon.nome %></h2>                                                   
+                        
+                    </div>
+    
+                </a>
+            <% }) %>
+    
 
-
-            <form action="/add"  class="card_form" id="card_form" method="post">
-
-                <div class="card_form_row">
-                    <label for="id">Número:</label>
-                    <input type="text" id="id" name="id" placeholder="001" size="8">
-                </div>
-
-                <div class="card_form_row">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Pikachu" size="8">
-                </div>
-
-                <div class="card_form_row">
-                    <label for="tipo">Tipo:</label>
-                    <input type="text" id="tipo" name="tipo" placeholder="Choque" size="8">
-                </div>
-                
-                <div class="card_form_row">
-                    <label for="habilidade">Habilidade:</label>
-                    <input type="text" id="habilidade" name="habilidade" placeholder="Estático" size="8">
-                </div>
-
-                <div class="card_form_row">
-                    <label for="categoria">Categoria:</label>
-                    <input type="text" id="categoria" name="categoria" placeholder="Rato" size="8">
-                </div>
-                
-
-                <div class="card_form_row">
-                    <label for="altura">Altura:</label>
-                    <input type="text" id="altura" name="altura" placeholder="40 cm" size="8">
-                </div>
-
-                <div class="card_form_row">
-                    <label for="peso">Peso:</label>
-                    <input type="text" id="peso" name="peso" placeholder="6 kg" size="8">
-                </div>                
-
-                <label for="imagem">Imagem:</label>
-                <textarea type="text" id="imagem" name="imagem" placeholder="http//" size="10"></textarea>
-                <label for="descricao">Descrição:</label>
-                <textarea type="text" id="descricao" name="descricao" placeholder="Pikachu que pode gerar eletricidade poderosa tem bolsas nas bochechas que são extra macias e super elásticas." size="10"></textarea>
-
-                <button id="submit_cadastro" type="submit">Cadastrar</button>
-
-            </form>
 
         </div>
-
-        <% pokedex.forEach((pokemon) =>{%>
-
         
-            <a class="container_card" id="container_card" href="/detalhes/<%= pokemon.nome %>" >
-
-                <div class="card" id="card">
-
-                    <h2 id="numero">Nº <%= pokemon.id %></h2>
-                    <img src="<%= pokemon.imagem %>" class="card_img" alt="Imagem" title="" />
-                    <h2 id="nome"><%= pokemon.nome %></h2>                                                   
-                    
-                </div>
-
-            </a>
-        <% }) %>
-
         
 
 
@@ -158,6 +164,6 @@
 
     </footer>
     
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
