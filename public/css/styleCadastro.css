@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Noto+Sans+JP:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 
-
 * {
   border: 0;
   padding: 0;
@@ -34,14 +33,15 @@ nav {
   width: 100%;
 }
 
-main {  
+main {
+  border: 3px solid rgb(233, 14, 14);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   width: 80%;
   height: 100%;
-  background-color: rgb(194, 190, 190);  
+  background-color: rgb(194, 190, 190);
 }
 
 footer {
@@ -173,83 +173,85 @@ footer {
   background: rgb(29, 133, 3);
 }
 
-
-
-
 /*========================================================================== MAIN ==========================================================================*/
 
-
-.card_form{
+.card_form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
   align-content: center;
-  margin-top: 1.5rem;  
-  margin-left: 4rem;
-  width: 30%;
+  align-items: center;
+  width: 100%;
+  max-width: 45rem;
   font-weight: bold;
   color: rgb(4, 60, 99);
   gap: 0.8rem;
-  
 }
 
-.card_form_row{
+.card_form_row {
   display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 80%;
+  gap: 1rem;
+}
+
+.card_form_column{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   width: 80%;
   gap: 1rem;
 }
 
-.form_input{
-  width: 80%;
+
+.form_input {  
+  width: 100%;
   border: 1.5px solid rgb(94, 93, 93);
-  border-radius: 3px 3px 3px 3px;  
+  border-radius: 3px 3px 3px 3px;
 }
 
-.form_input:focus{
+.form_input:focus {
   background: rgba(4, 31, 204, 0.19);
 }
 
 #id{
-  margin-left: 1.25rem;
-
+  margin-left: 1.3rem;
 }
 
 #nome{
-  margin-left: 2.25rem;
+  margin-left: 2.3rem;
 }
 
 #tipo{
-  margin-left: 2.75rem;
-  
+  margin-left: 2.8rem;
 }
 
 #categoria{
-  margin-left: 0.5rem;
-  
+  margin-left: 0.4rem;
 }
 
 #altura{
-  margin-left: 1.9rem;
+  margin-left: 1.8rem;
 }
 
 #peso{
-  margin-left: 2.8rem;
+  margin-left: 2.6rem;
 }
+
 
 .submit_cadastro {
   width: 12rem;
   height: 3rem;
-  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-  border-radius:5px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-transform:uppercase;
-  font-size:1.5vw;
-  font-weight:bold;
+  background-image: linear-gradient(90deg, #00c0ff 0%, #ffcf00 49%, #fc4f4f 80%, #00c0ff 100%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-weight: bold;
   padding-left: 0.9rem;
   margin-left: 3rem;
   margin-top: 0.5rem;
@@ -258,49 +260,47 @@ footer {
 }
 
 .submit_cadastro:after {
-  content:attr(alt);
+  content: attr(alt);
   width: 11.5rem;
   height: 2.5rem;
-  background-color:rgb(255, 255, 255);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: -10rem;
   color: rgb(4, 60, 99);
 }
 
 .submit_cadastro:hover {
-  animation:slidebg 2s linear infinite;
+  animation: slidebg 2s linear infinite;
 }
 
 @keyframes slidebg {
   to {
-    background-position:20vw;
+    background-position: 20vw;
   }
 }
 
-.cadastro__alert{  
+.cadastro__alert {
   display: none;
   flex-direction: row;
   width: 100%;
-  justify-content:center;
-  align-items:center;
-  background-color: rgba(52, 172, 16, 0.863);  
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(52, 172, 16, 0.863);
   height: 2rem;
   gap: 2rem;
-
 }
 
-#cadastro__alert__title{
+#cadastro__alert__title {
   color: rgb(255, 255, 255);
   filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
-
 }
 
-#cadastro__alert__close{
+#cadastro__alert__close {
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   width: 2rem;
   height: 100%;
@@ -308,7 +308,6 @@ footer {
   cursor: pointer;
   background-color: rgb(141, 6, 6);
   filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
-
 }
 
 /*=================================================================== FOOTER ==========================================================================*/
@@ -323,4 +322,12 @@ footer {
 #copyright a {
   text-decoration: none;
   color: rgb(12, 230, 245);
+}
+
+/*================================================================ RESPONSIVIDADE ==========================================================================*/
+
+@media (max-width: 749px) {
+}
+
+@media (max-width: 313px) {
 }
